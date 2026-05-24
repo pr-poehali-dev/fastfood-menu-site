@@ -13,10 +13,11 @@ const menuCategories = [
 
 const menuItems = [
   // Шаурма
-  { id: 1, category: "shawarma", name: "Шаурма Классик", price: 259, desc: "Куриное мясо, свежие овощи, соус чесночный, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
-  { id: 2, category: "shawarma", name: "Шаурма Острая", price: 279, desc: "Куриное мясо, халапеньо, острый соус, овощи, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", hot: true },
-  { id: 3, category: "shawarma", name: "Шаурма Говяжья", price: 299, desc: "Говядина, маринованные огурцы, лук, фирменный соус", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
-  { id: 4, category: "shawarma", name: "Шаурма Дабл", price: 339, desc: "Двойная порция курицы, двойной соус, двойное удовольствие", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 1, category: "shawarma", name: "Шаурма Лайт", price: 239, desc: "Куриная грудка, свежие овощи, лёгкий йогуртовый соус, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
+  { id: 2, category: "shawarma", name: "Шаурма Классическая", price: 269, desc: "Куриное мясо, свежие овощи, чесночный соус, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 3, category: "shawarma", name: "Шаурма Мясная с беконом", price: 319, desc: "Курица + хрустящий бекон, овощи, фирменный соус, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", hot: true },
+  { id: 4, category: "shawarma", name: "Шаурма Сырная", price: 299, desc: "Курица, плавленый чеддер, овощи, сырный соус, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 5, category: "shawarma", name: "Шаурма Большая", price: 359, desc: "Двойная порция курицы, много овощей, двойной соус, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
   // Гиро
   { id: 5, category: "gyro", name: "Гиро Классик", price: 289, desc: "Свинина на вертеле, питта, томаты, огурец, соус дзадзики", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", popular: true },
   { id: 6, category: "gyro", name: "Гиро Куриный", price: 269, desc: "Куриное мясо на гриле, питта, свежие овощи, соус дзадзики", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg" },
