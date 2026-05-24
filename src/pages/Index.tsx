@@ -11,13 +11,13 @@ const menuCategories = [
 ];
 
 const menuItems = [
-  { id: 1, category: "burgers", name: "ОгоньБургер", price: 349, oldPrice: 429, desc: "Двойная говядина, чеддер, карамелизованный лук, фирменный соус", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true, popular: true },
-  { id: 2, category: "burgers", name: "Чикен Криспи", price: 299, desc: "Хрустящий куриный стейк, салат, томаты, айоли", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
-  { id: 3, category: "burgers", name: "Барбекю Смоки", price: 379, desc: "Говядина ангус, бекон, лук-кольца, соус BBQ", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true },
-  { id: 4, category: "burgers", name: "Дабл Чиз", price: 329, desc: "Двойной чизбургер с маринованными огурчиками и горчицей", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
-  { id: 5, category: "combo", name: "Комбо Классика", price: 499, oldPrice: 599, desc: "Бургер + Картошка М + Кола 0.4л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
-  { id: 6, category: "combo", name: "Комбо Семейный", price: 899, oldPrice: 1099, desc: "2 Бургера + 2 Картошки Б + 2 Колы 0.5л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
-  { id: 7, category: "snacks", name: "Картошка Огонь", price: 149, desc: "Золотистая с острой приправой и соусом чили", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
+  { id: 1, category: "burgers", name: "Бобёр Делюкс", price: 349, oldPrice: 429, desc: "Двойная говядина, чеддер, карамелизованный лук, фирменный соус бобра", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true, popular: true },
+  { id: 2, category: "burgers", name: "Чикен Бобёр", price: 299, desc: "Хрустящий куриный стейк, салат, томаты, айоли", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 3, category: "burgers", name: "Смоки Бобёр", price: 379, desc: "Говядина ангус, бекон, лук-кольца, фирменный соус BBQ", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true },
+  { id: 4, category: "burgers", name: "Дабл Чиз Бобёр", price: 329, desc: "Двойной чизбургер с маринованными огурчиками и горчицей", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
+  { id: 5, category: "combo", name: "Комбо Сытый бобёр", price: 499, oldPrice: 599, desc: "Бургер + Картошка М + Кола 0.4л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 6, category: "combo", name: "Комбо Семейный бобёр", price: 899, oldPrice: 1099, desc: "2 Бургера + 2 Картошки Б + 2 Колы 0.5л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  { id: 7, category: "snacks", name: "Картошка по-бобриному", price: 149, desc: "Золотистая с острой приправой и соусом чили", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
   { id: 8, category: "snacks", name: "Наггетсы x8", price: 199, desc: "Сочные куриные кусочки в хрустящей панировке", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
   { id: 9, category: "snacks", name: "Луковые кольца", price: 129, desc: "Хрустящие кольца в пивном кляре, соус ранч", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
   { id: 10, category: "drinks", name: "Кола 0.5л", price: 89, desc: "Освежающая Coca-Cola со льдом", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
@@ -32,9 +32,9 @@ const promos = [
 ];
 
 const branches = [
-  { name: "ОгоньБургер Центр", address: "ул. Ленина, 15", phone: "+7 (999) 123-45-67", hours: "10:00 – 23:00", metro: "м. Площадь Революции" },
-  { name: "ОгоньБургер Север", address: "пр. Победы, 88", phone: "+7 (999) 123-45-68", hours: "11:00 – 23:00", metro: "м. Речной вокзал" },
-  { name: "ОгоньБургер ТЦ Галерея", address: "ул. Садовая, 42, 3 этаж", phone: "+7 (999) 123-45-69", hours: "10:00 – 22:00", metro: "м. Садовая" },
+  { name: "Сытый бобёр Центр", address: "ул. Ленина, 15", phone: "+7 (999) 123-45-67", hours: "10:00 – 23:00", metro: "м. Площадь Революции" },
+  { name: "Сытый бобёр Север", address: "пр. Победы, 88", phone: "+7 (999) 123-45-68", hours: "11:00 – 23:00", metro: "м. Речной вокзал" },
+  { name: "Сытый бобёр ТЦ Галерея", address: "ул. Садовая, 42, 3 этаж", phone: "+7 (999) 123-45-69", hours: "10:00 – 22:00", metro: "м. Садовая" },
 ];
 
 const reviews = [
@@ -98,8 +98,8 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 nav-blur">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("home")}>
-            <span className="text-2xl">🔥</span>
-            <span className="font-bold text-xl tracking-wider fire-text" style={{ fontFamily: "Oswald, sans-serif" }}>ОгоньБургер</span>
+            <span className="text-2xl">🦫</span>
+            <span className="font-bold text-xl tracking-wider fire-text" style={{ fontFamily: "Oswald, sans-serif" }}>Сытый бобёр</span>
           </div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -154,15 +154,15 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center w-full">
           <div className="animate-slide-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-6" style={{ background: "rgba(255,59,0,0.15)", border: "1px solid rgba(255,59,0,0.3)", color: "#FF8C00" }}>
-              🔥 Доставка за 30 минут
+              🦫 Доставка за 30 минут
             </div>
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-none tracking-tight" style={{ fontFamily: "Oswald, sans-serif" }}>
-              <span className="fire-text">ГОРЯЧО.</span><br />
-              <span className="text-white">ВКУСНО.</span><br />
-              <span style={{ color: "#FFD000" }}>СЕЙЧАС.</span>
+              <span className="fire-text">СЫТНЫЙ.</span><br />
+              <span className="text-white">ВКУСНЫЙ.</span><br />
+              <span style={{ color: "#FFD000" }}>БОБЁР.</span>
             </h1>
             <p className="text-lg mb-8 max-w-md leading-relaxed" style={{ color: "rgba(255,200,150,0.7)" }}>
-              Сочные бургеры, хрустящая картошка и острые соусы. Готовим за 10 минут, доставляем горячим.
+              Сочные бургеры, хрустящая картошка и фирменные соусы. Готовим за 10 минут, доставляем горячим.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -200,7 +200,7 @@ export default function Index() {
             />
             <div className="absolute -bottom-4 -left-4 px-4 py-3 rounded-2xl" style={{ background: "rgba(20,16,8,0.95)", border: "1px solid rgba(255,140,0,0.3)" }}>
               <div className="text-xs mb-0.5" style={{ color: "rgba(255,180,100,0.7)" }}>Хит продаж</div>
-              <div className="font-bold text-white" style={{ fontFamily: "Oswald" }}>ОгоньБургер</div>
+              <div className="font-bold text-white" style={{ fontFamily: "Oswald" }}>Бобёр Делюкс</div>
               <div className="fire-text font-black" style={{ fontFamily: "Oswald" }}>349 ₽</div>
             </div>
           </div>
@@ -465,10 +465,10 @@ export default function Index() {
       <footer className="py-10 px-4" style={{ borderTop: "1px solid rgba(255,140,0,0.15)", background: "rgba(0,0,0,0.3)" }}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🔥</span>
-            <span className="font-bold text-xl fire-text" style={{ fontFamily: "Oswald" }}>ОгоньБургер</span>
+            <span className="text-2xl">🦫</span>
+            <span className="font-bold text-xl fire-text" style={{ fontFamily: "Oswald" }}>Сытый бобёр</span>
           </div>
-          <p className="text-sm text-center" style={{ color: "rgba(255,180,100,0.4)" }}>© 2025 ОгоньБургер. Все права защищены. Ежедневно 10:00–23:00</p>
+          <p className="text-sm text-center" style={{ color: "rgba(255,180,100,0.4)" }}>© 2025 Сытый бобёр. Все права защищены. Ежедневно 10:00–23:00</p>
           <a href="tel:+79991234567" className="text-sm text-orange-300/60 hover:text-orange-300 transition-colors">+7 (999) 123-45-67</a>
         </div>
       </footer>
