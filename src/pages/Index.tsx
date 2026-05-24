@@ -8,7 +8,7 @@ const menuCategories = [
   { id: "burgers", label: "Бургеры", emoji: "🍔" },
   { id: "drinks", label: "Напитки", emoji: "🥤" },
   { id: "fries", label: "Фри", emoji: "🍟" },
-  { id: "wings", label: "Крылья и криспи", emoji: "🍗" },
+  { id: "wings", label: "Крылья и стрипсы", emoji: "🍗" },
 ];
 
 const menuItems = [
@@ -39,8 +39,8 @@ const menuItems = [
   // Крылья и криспи
   { id: 20, category: "wings", name: "Крылья BBQ x6", price: 219, desc: "Сочные крылья в соусе барбекю, запечённые до хруста", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
   { id: 21, category: "wings", name: "Крылья Острые x6", price: 229, desc: "Крылья в остром соусе буффало, соус ранч в подарок", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
-  { id: 22, category: "wings", name: "Криспи Стрипсы x4", price: 199, desc: "Куриные стрипсы в хрустящей панировке, соус на выбор", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
-  { id: 23, category: "wings", name: "Криспи Наггетсы x8", price: 199, desc: "Сочные куриные кусочки в хрустящей панировке", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  { id: 22, category: "wings", name: "Стрипсы x4", price: 199, desc: "Куриные стрипсы в хрустящей панировке, соус на выбор", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 23, category: "wings", name: "Стрипсы Наггетсы x8", price: 199, desc: "Сочные куриные кусочки в хрустящей панировке", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
 ];
 
 const promos = [
