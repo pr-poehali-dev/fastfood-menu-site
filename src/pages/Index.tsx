@@ -52,9 +52,7 @@ const promos = [
 ];
 
 const branches = [
-  { name: "Сытый бобёр Центр", address: "ул. Ленина, 15", phone: "+7 (999) 123-45-67", hours: "10:00 – 23:00", metro: "м. Площадь Революции" },
-  { name: "Сытый бобёр Север", address: "пр. Победы, 88", phone: "+7 (999) 123-45-68", hours: "11:00 – 23:00", metro: "м. Речной вокзал" },
-  { name: "Сытый бобёр ТЦ Галерея", address: "ул. Садовая, 42, 3 этаж", phone: "+7 (999) 123-45-69", hours: "10:00 – 22:00", metro: "м. Садовая" },
+  { name: "Сытый бобёр", address: "с. Новоукраинское, ул. Красная, 151", phone: "8-953-078-49-68", hours: "10:00 – 21:00", metro: "" },
 ];
 
 const reviews = [
@@ -425,30 +423,28 @@ export default function Index() {
             <p style={{ color: "rgba(255,200,150,0.6)" }}>Найди нас рядом</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex justify-center">
             {branches.map((b, i) => (
-              <div key={i} className="rounded-2xl p-6 hover-lift" style={{ background: "var(--card-bg)", border: "1px solid rgba(255,140,0,0.15)" }}>
+              <div key={i} className="rounded-2xl p-8 hover-lift w-full max-w-md" style={{ background: "var(--card-bg)", border: "1px solid rgba(255,140,0,0.15)" }}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(255,59,0,0.15)", border: "1px solid rgba(255,59,0,0.3)" }}>
-                  <span className="text-xl">🔥</span>
+                  <span className="text-xl">🦫</span>
                 </div>
-                <h3 className="font-bold text-lg text-white mb-4" style={{ fontFamily: "Oswald" }}>{b.name}</h3>
-                <div className="space-y-3">
-                  {[
-                    { icon: "MapPin", text: b.address },
-                    { icon: "Train", text: b.metro },
-                    { icon: "Clock", text: b.hours },
-                  ].map(({ icon, text }) => (
-                    <div key={icon} className="flex items-start gap-2.5">
-                      <Icon name={icon} size={15} className="text-orange-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm" style={{ color: "rgba(255,200,150,0.8)" }}>{text}</span>
-                    </div>
-                  ))}
+                <h3 className="font-bold text-xl text-white mb-5" style={{ fontFamily: "Oswald" }}>{b.name}</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-2.5">
+                    <Icon name="MapPin" size={15} className="text-orange-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm" style={{ color: "rgba(255,200,150,0.8)" }}>{b.address}</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <Icon name="Clock" size={15} className="text-orange-400 flex-shrink-0" />
+                    <span className="text-sm" style={{ color: "rgba(255,200,150,0.8)" }}>{b.hours}</span>
+                  </div>
                   <div className="flex items-center gap-2.5">
                     <Icon name="Phone" size={15} className="text-orange-400 flex-shrink-0" />
                     <a href={`tel:${b.phone}`} className="text-sm text-orange-300 hover:text-orange-100 transition-colors">{b.phone}</a>
                   </div>
                 </div>
-                <button className="w-full mt-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:opacity-90" style={{ background: "rgba(255,140,0,0.12)", border: "1px solid rgba(255,140,0,0.25)", color: "#FF8C00", fontFamily: "Oswald" }}>
+                <button className="w-full mt-6 py-2.5 rounded-xl text-sm font-semibold transition-all hover:opacity-90" style={{ background: "rgba(255,140,0,0.12)", border: "1px solid rgba(255,140,0,0.25)", color: "#FF8C00", fontFamily: "Oswald" }}>
                   ПОСТРОИТЬ МАРШРУТ
                 </button>
               </div>
