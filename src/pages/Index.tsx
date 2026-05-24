@@ -168,7 +168,7 @@ export default function Index() {
       </nav>
 
       {/* ГЛАВНАЯ */}
-      <section id="home" className="hero-bg min-h-screen flex items-center pt-16 relative">
+      <section id="home" className="hero-bg pt-16">
         <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center w-full">
           <div className="animate-slide-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-6" style={{ background: "rgba(255,59,0,0.15)", border: "1px solid rgba(255,59,0,0.3)", color: "#FF8C00" }}>
@@ -224,26 +224,24 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 pb-8">
-          <div className="max-w-7xl mx-auto px-4">
-            <p className="text-sm mb-4 font-medium uppercase tracking-widest" style={{ color: "rgba(255,180,100,0.6)" }}>Популярное сегодня</p>
-            <div className="flex gap-3 overflow-x-auto pb-2">
-              {popularItems.map(item => (
-                <div
-                  key={item.id}
-                  className="flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-2xl cursor-pointer hover-lift"
-                  style={{ background: "rgba(255,140,0,0.08)", border: "1px solid rgba(255,140,0,0.2)" }}
-                  onClick={() => addToCart(item)}
-                >
-                  <span className="text-xl">🍔</span>
-                  <div>
-                    <div className="text-sm font-semibold text-white whitespace-nowrap">{item.name}</div>
-                    <div className="text-xs fire-text font-bold">{item.price} ₽</div>
-                  </div>
-                  <Icon name="Plus" size={14} className="text-orange-400" />
+        <div className="max-w-7xl mx-auto px-4 pb-12">
+          <p className="text-sm mb-4 font-medium uppercase tracking-widest" style={{ color: "rgba(255,180,100,0.6)" }}>Популярное сегодня</p>
+          <div className="flex gap-3 overflow-x-auto pb-2">
+            {popularItems.map(item => (
+              <div
+                key={item.id}
+                className="flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-2xl cursor-pointer hover-lift"
+                style={{ background: "rgba(255,140,0,0.08)", border: "1px solid rgba(255,140,0,0.2)" }}
+                onClick={() => addToCart(item)}
+              >
+                <span className="text-xl">🍔</span>
+                <div>
+                  <div className="text-sm font-semibold text-white whitespace-nowrap">{item.name}</div>
+                  <div className="text-xs fire-text font-bold">{item.price} ₽</div>
                 </div>
-              ))}
-            </div>
+                <Icon name="Plus" size={14} className="text-orange-400" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
