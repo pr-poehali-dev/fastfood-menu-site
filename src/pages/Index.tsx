@@ -495,8 +495,8 @@ export default function Index() {
             <span className="text-2xl">🦫</span>
             <span className="font-bold text-xl fire-text" style={{ fontFamily: "Oswald" }}>Сытый бобёр</span>
           </div>
-          <p className="text-sm text-center" style={{ color: "rgba(255,180,100,0.4)" }}>© 2025 Сытый бобёр. Все права защищены. Ежедневно 10:00–23:00</p>
-          <a href="tel:+79991234567" className="text-sm text-orange-300/60 hover:text-orange-300 transition-colors">+7 (999) 123-45-67</a>
+          <p className="text-sm text-center" style={{ color: "rgba(255,180,100,0.4)" }}>© 2025 Сытый бобёр. Все права защищены. Ежедневно 10:00–21:00</p>
+          <a href="tel:89530784968" className="text-sm text-orange-300/60 hover:text-orange-300 transition-colors">8-953-078-49-68</a>
         </div>
       </footer>
 
