@@ -3,26 +3,44 @@ import Icon from "@/components/ui/icon";
 
 // ===== ДАННЫЕ =====
 const menuCategories = [
+  { id: "shawarma", label: "Шаурма", emoji: "🌯" },
+  { id: "gyro", label: "Гиро", emoji: "🥙" },
   { id: "burgers", label: "Бургеры", emoji: "🍔" },
-  { id: "combo", label: "Комбо", emoji: "🍟" },
-  { id: "snacks", label: "Закуски", emoji: "🌮" },
   { id: "drinks", label: "Напитки", emoji: "🥤" },
-  { id: "desserts", label: "Десерты", emoji: "🍦" },
+  { id: "fries", label: "Фри", emoji: "🍟" },
+  { id: "wings", label: "Крылья и криспи", emoji: "🍗" },
 ];
 
 const menuItems = [
-  { id: 1, category: "burgers", name: "Бобёр Делюкс", price: 349, oldPrice: 429, desc: "Двойная говядина, чеддер, карамелизованный лук, фирменный соус бобра", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true, popular: true },
-  { id: 2, category: "burgers", name: "Чикен Бобёр", price: 299, desc: "Хрустящий куриный стейк, салат, томаты, айоли", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
-  { id: 3, category: "burgers", name: "Смоки Бобёр", price: 379, desc: "Говядина ангус, бекон, лук-кольца, фирменный соус BBQ", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true },
-  { id: 4, category: "burgers", name: "Дабл Чиз Бобёр", price: 329, desc: "Двойной чизбургер с маринованными огурчиками и горчицей", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
-  { id: 5, category: "combo", name: "Комбо Сытый бобёр", price: 499, oldPrice: 599, desc: "Бургер + Картошка М + Кола 0.4л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
-  { id: 6, category: "combo", name: "Комбо Семейный бобёр", price: 899, oldPrice: 1099, desc: "2 Бургера + 2 Картошки Б + 2 Колы 0.5л", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
-  { id: 7, category: "snacks", name: "Картошка по-бобриному", price: 149, desc: "Золотистая с острой приправой и соусом чили", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
-  { id: 8, category: "snacks", name: "Наггетсы x8", price: 199, desc: "Сочные куриные кусочки в хрустящей панировке", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
-  { id: 9, category: "snacks", name: "Луковые кольца", price: 129, desc: "Хрустящие кольца в пивном кляре, соус ранч", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
-  { id: 10, category: "drinks", name: "Кола 0.5л", price: 89, desc: "Освежающая Coca-Cola со льдом", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
-  { id: 11, category: "drinks", name: "Лимонад Цитрус", price: 119, desc: "Домашний лимонад с апельсином и мятой", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
-  { id: 12, category: "desserts", name: "Шоко-Фондан", price: 179, desc: "Тёплый шоколадный кекс с жидкой начинкой и ванильным мороженым", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  // Шаурма
+  { id: 1, category: "shawarma", name: "Шаурма Классик", price: 259, desc: "Куриное мясо, свежие овощи, соус чесночный, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 2, category: "shawarma", name: "Шаурма Острая", price: 279, desc: "Куриное мясо, халапеньо, острый соус, овощи, лаваш", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", hot: true },
+  { id: 3, category: "shawarma", name: "Шаурма Говяжья", price: 299, desc: "Говядина, маринованные огурцы, лук, фирменный соус", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
+  { id: 4, category: "shawarma", name: "Шаурма Дабл", price: 339, desc: "Двойная порция курицы, двойной соус, двойное удовольствие", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  // Гиро
+  { id: 5, category: "gyro", name: "Гиро Классик", price: 289, desc: "Свинина на вертеле, питта, томаты, огурец, соус дзадзики", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", popular: true },
+  { id: 6, category: "gyro", name: "Гиро Куриный", price: 269, desc: "Куриное мясо на гриле, питта, свежие овощи, соус дзадзики", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg" },
+  { id: 7, category: "gyro", name: "Гиро Микс", price: 319, desc: "Свинина + курица, питта, лук, томаты, соус тцатцики", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true },
+  // Бургеры
+  { id: 8, category: "burgers", name: "Бобёр Делюкс", price: 349, oldPrice: 429, desc: "Двойная говядина, чеддер, карамелизованный лук, фирменный соус", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true, popular: true },
+  { id: 9, category: "burgers", name: "Чикен Бобёр", price: 299, desc: "Хрустящий куриный стейк, салат, томаты, айоли", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg", popular: true },
+  { id: 10, category: "burgers", name: "Смоки Бобёр", price: 379, desc: "Говядина ангус, бекон, лук-кольца, фирменный соус BBQ", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/a0843940-745c-44a7-bce1-36696b5fefb8.jpg", hot: true },
+  { id: 11, category: "burgers", name: "Дабл Чиз Бобёр", price: 329, desc: "Двойной чизбургер с маринованными огурчиками и горчицей", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/97ea43ad-731b-4da0-a797-fc42ddcbff34.jpg" },
+  // Напитки
+  { id: 12, category: "drinks", name: "Кола 0.5л", price: 89, desc: "Освежающая Coca-Cola со льдом", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  { id: 13, category: "drinks", name: "Лимонад Цитрус", price: 119, desc: "Домашний лимонад с апельсином и мятой", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 14, category: "drinks", name: "Айран 0.3л", price: 79, desc: "Освежающий кисломолочный напиток, хорошо к шаурме", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  { id: 15, category: "drinks", name: "Морс Ягодный", price: 99, desc: "Домашний морс из лесных ягод, без консервантов", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  // Фри
+  { id: 16, category: "fries", name: "Фри Классик М", price: 99, desc: "Золотистый картофель фри, соль, соус на выбор", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 17, category: "fries", name: "Фри Классик Б", price: 139, desc: "Большая порция золотистого картофеля фри", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
+  { id: 18, category: "fries", name: "Фри Острый", price: 119, desc: "Картофель фри с острой паприкой и соусом чили", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
+  { id: 19, category: "fries", name: "Фри Сырный", price: 149, desc: "Картофель фри с расплавленным чеддером и беконом", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  // Крылья и криспи
+  { id: 20, category: "wings", name: "Крылья BBQ x6", price: 219, desc: "Сочные крылья в соусе барбекю, запечённые до хруста", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 21, category: "wings", name: "Крылья Острые x6", price: 229, desc: "Крылья в остром соусе буффало, соус ранч в подарок", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", hot: true },
+  { id: 22, category: "wings", name: "Криспи Стрипсы x4", price: 199, desc: "Куриные стрипсы в хрустящей панировке, соус на выбор", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg", popular: true },
+  { id: 23, category: "wings", name: "Криспи Наггетсы x8", price: 199, desc: "Сочные куриные кусочки в хрустящей панировке", image: "https://cdn.poehali.dev/projects/5e3ca7b8-e7a9-42ed-82e3-c3d2b879ffb0/files/623201cc-2ec9-4335-b625-2fcaae89f5c9.jpg" },
 ];
 
 const promos = [
@@ -58,7 +76,7 @@ const sectionLabels = ["Главная", "Меню", "Акции", "Достав
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState("home");
-  const [activeCategory, setActiveCategory] = useState("burgers");
+  const [activeCategory, setActiveCategory] = useState("shawarma");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
