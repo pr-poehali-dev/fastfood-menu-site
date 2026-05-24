@@ -78,7 +78,7 @@ const sectionLabels = ["Главная", "Меню", "Акции", "Достав
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState("home");
-  const [activeCategory, setActiveCategory] = useState("shawarma");
+
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -108,7 +108,6 @@ export default function Index() {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const filteredMenu = menuItems.filter(i => i.category === activeCategory);
   const popularItems = menuItems.filter(i => i.popular);
 
   return (
@@ -256,53 +255,67 @@ export default function Index() {
             <p style={{ color: "rgba(255,200,150,0.6)" }}>Готовим свежее каждый день</p>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-4 mb-8 justify-center flex-wrap">
+          {/* Якорные ссылки по категориям */}
+          <div className="flex gap-2 overflow-x-auto pb-4 mb-10 justify-center flex-wrap">
             {menuCategories.map(cat => (
-              <button
+              <a
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 whitespace-nowrap"
-                style={activeCategory === cat.id
-                  ? { background: "linear-gradient(135deg, #FF3B00, #FF8C00)", color: "white", fontFamily: "Oswald" }
-                  : { background: "rgba(255,140,0,0.08)", border: "1px solid rgba(255,140,0,0.2)", color: "#FF8C00", fontFamily: "Oswald" }
-                }
+                href={`#cat-${cat.id}`}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm whitespace-nowrap transition-all duration-200 hover:opacity-80"
+                style={{ background: "rgba(255,140,0,0.08)", border: "1px solid rgba(255,140,0,0.2)", color: "#FF8C00", fontFamily: "Oswald", textDecoration: "none" }}
               >
                 <span>{cat.emoji}</span>
                 {cat.label}
-              </button>
+              </a>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {filteredMenu.map(item => (
-              <div key={item.id} className="rounded-2xl overflow-hidden hover-lift" style={{ background: "var(--card-bg)", border: "1px solid rgba(255,140,0,0.15)" }}>
-                <div className="relative">
-                  <img src={item.image} alt={item.name} className="w-full object-cover" style={{ height: "180px" }} />
-                  <div className="absolute top-3 left-3 flex gap-1.5 flex-wrap">
-                    {item.hot && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-white" style={{ background: "#FF3B00" }}>🔥 Острое</span>}
-                    {item.popular && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-black" style={{ background: "#FFD000" }}>★ Хит</span>}
-                    {item.oldPrice && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-white" style={{ background: "#FF3B00" }}>СКИДКА</span>}
+          {/* Лента всех категорий */}
+          <div className="space-y-14">
+            {menuCategories.map(cat => {
+              const items = menuItems.filter(i => i.category === cat.id);
+              if (!items.length) return null;
+              return (
+                <div key={cat.id} id={`cat-${cat.id}`}>
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-3xl">{cat.emoji}</span>
+                    <h3 className="text-2xl md:text-3xl font-black text-white" style={{ fontFamily: "Oswald" }}>{cat.label}</h3>
+                    <div className="flex-1 h-px" style={{ background: "rgba(255,140,0,0.2)" }} />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    {items.map(item => (
+                      <div key={item.id} className="rounded-2xl overflow-hidden hover-lift" style={{ background: "var(--card-bg)", border: "1px solid rgba(255,140,0,0.15)" }}>
+                        <div className="relative">
+                          <img src={item.image} alt={item.name} className="w-full object-cover" style={{ height: "180px" }} />
+                          <div className="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                            {item.hot && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-white" style={{ background: "#FF3B00" }}>🔥 Острое</span>}
+                            {item.popular && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-black" style={{ background: "#FFD000" }}>★ Хит</span>}
+                            {item.oldPrice && <span className="px-2 py-0.5 rounded-full text-xs font-bold text-white" style={{ background: "#FF3B00" }}>СКИДКА</span>}
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-bold text-lg text-white mb-1" style={{ fontFamily: "Oswald" }}>{item.name}</h3>
+                          <p className="text-xs mb-4 leading-relaxed" style={{ color: "rgba(255,200,150,0.6)" }}>{item.desc}</p>
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <span className="text-xl font-black fire-text" style={{ fontFamily: "Oswald" }}>{item.price} ₽</span>
+                              {item.oldPrice && <span className="ml-2 text-sm line-through" style={{ color: "rgba(255,180,100,0.4)" }}>{item.oldPrice} ₽</span>}
+                            </div>
+                            <button
+                              onClick={() => addToCart(item)}
+                              className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95"
+                              style={{ background: "linear-gradient(135deg, #FF3B00, #FF8C00)" }}
+                            >
+                              <Icon name="Plus" size={16} className="text-white" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg text-white mb-1" style={{ fontFamily: "Oswald" }}>{item.name}</h3>
-                  <p className="text-xs mb-4 leading-relaxed" style={{ color: "rgba(255,200,150,0.6)" }}>{item.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-xl font-black fire-text" style={{ fontFamily: "Oswald" }}>{item.price} ₽</span>
-                      {item.oldPrice && <span className="ml-2 text-sm line-through" style={{ color: "rgba(255,180,100,0.4)" }}>{item.oldPrice} ₽</span>}
-                    </div>
-                    <button
-                      onClick={() => addToCart(item)}
-                      className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95"
-                      style={{ background: "linear-gradient(135deg, #FF3B00, #FF8C00)" }}
-                    >
-                      <Icon name="Plus" size={16} className="text-white" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
